@@ -10,7 +10,10 @@
 <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <!-- 加载OpenLayers 类库 -->
 <script type="text/javascript" src="assets/openlayers/OpenLayers.js"></script>
+
+<script type="text/javascript" src="assets/openlayers/config.js"></script>
 <script type="text/javascript" src="assets/openlayers/app.js"></script>
+<script type="text/javascript" src="assets/openlayers/mapTool.js"></script>
 <style>
 html,body {
 	width: 100%;
@@ -28,7 +31,7 @@ html,body {
 	  <div class="row-fluid">
 	    <div class="span8">
 			<div id="rcp1_map" style="width: 900px; height: 600px;"></div>
-			<div style="float: left;" id="result"></div>
+			<div style="float: left;" id="result">123</div>
 	    </div>
 	    <div class="span4">
 	      	<p>
@@ -37,6 +40,11 @@ html,body {
 	      	</p>
 	      	<p>
 	      	<button class="btn btn-primary" type="button" onclick="javascript:App.drawPolygon();">画图</button>
+	      	</p>
+	      	
+	      	<p>
+	      	<button class="btn btn-primary" type="button" onclick="javascript:MapTool.toggleControl('line');">长度</button>
+	      	<button class="btn btn-primary" type="button" onclick="javascript:MapTool.toggleControl('polygon');">面积</button>
 	      	</p>
 	    </div>
 	  </div>
